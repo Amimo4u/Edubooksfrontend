@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://edubooksbackend.onrender.com/api/:path*" 
+    }
+  ]
+}
