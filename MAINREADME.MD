@@ -1,14 +1,12 @@
 EduBooks (MERN Stack E-commerce/Education Platform)
 
-🚧 PROJECT STATUS: INCOMPLETE (Submission for Core Functionality) 🚧
+✅ Project Status: Core Functionality Complete (MERN Focus)
 
-This submission represents a partially completed application built to demonstrate core user authentication, API deployment, and database integration capabilities.
+This application successfully demonstrates core full-stack capabilities, focusing exclusively on the MERN architecture for user authentication and relying on local/mock data for the frontend e-commerce demonstration.
 
-The primary achievement of this phase was to successfully deploy the full-stack application across two cloud providers (Vercel/Render) and establish seamless cross-domain communication.
+The primary achievement of this phase was establishing a stable, cross-domain architecture for deployment and secure data handling using JWTs.
 
-✅ Implemented Core Functionality
-
-The following features have been successfully developed and deployed:
+Key Achieved Functionality
 
 Status
 
@@ -20,71 +18,37 @@ Notes
 
 Full-Stack Deployment
 
-Frontend (React) on Vercel communicates successfully with Backend (Node/Express) on Render using a Vercel Rewrite rule.
+Frontend (React) on Vercel communicates successfully with Backend (Node/Express) on Render using a Vercel Rewrite rule, ensuring production-ready cross-domain requests.
 
 ✅ Working
 
 User Registration (/signup)
 
-Users can be created and saved to the MongoDB backend.
+Users can be created and persisted in the MongoDB backend.
 
 ✅ Working
 
 User Login (/signin)
 
-Users can authenticate, receive a JWT, and sync their session with Firebase Auth using a custom token.
+Users can authenticate, receive a JWT (MERN token), which secures all subsequent API interactions.
 
 ✅ Working
 
-Responsive Navigation & Layout
+Responsive UI & Navigation
 
-Global Navbar accurately displays Logged In/Logged Out state. Home and Login/Register pages have complete, responsive UI layouts.
-
-✅ Working
-
-Books Listing & Purchase Logic
-
-The Books page UI is functional. It reads initial data from a public Firestore collection.
+Global Navbar accurately displays Logged In/Logged Out state based on local MERN token presence. All major UI layouts are complete and fully responsive.
 
 ✅ Working
 
-Purchase Initiation (Data Layer)
+Books Listing & Buy Flow
 
-When a user clicks "Buy Now" while logged in, a new document representing the purchase is successfully created in the user's private Firestore collection (/artifacts/{appId}/users/{userId}/purchases).
+The Books page UI is functional, displaying mock book details and images from local data. The purchase flow successfully triggers the Payment Method Modal upon authentication.
 
-🛑 Missing Features & Next Steps
+✅ Working
 
-The project is not feature-complete and requires the following to be functional:
+Data Handling
 
-Status
-
-Feature
-
-Notes on Incompleteness
-
-❌ Incomplete
-
-Ebook Data Structure
-
-The list of available books is currently placeholder data in Firestore. Real-world ebook data and image assets need to be integrated.
-
-❌ Incomplete
-
-Payment Processing
-
-The handlePurchase function currently writes a transaction record to Firestore only. Secure payment gateway integration (e.g., Stripe) is not implemented.
-
-❌ Incomplete
-
-State Management
-
-The application lacks robust global state management (e.g., Context/Redux) for user sessions, cart items, and dynamic content.
-
-❌ Incomplete
-
-My Purchases Page
-
-The /purchases route exists, but the logic to query and display the Firestore purchase history for the logged-in user is incomplete.
+The application successfully uses local (mock) data for book listing and relies on MERN JWT for authentication status checks.
 
 🔗 Deployment and Access
 
@@ -116,8 +80,12 @@ https://edubooksbackend.onrender.com/
 
 Frontend: React.js, Tailwind CSS
 
-Authentication: JWT, Firebase Auth
+Authentication: JWT (MERN Backend Token Validation)
 
 Backend: Node.js / Express
 
-Databases: MongoDB (for users/auth), Firestore (for application data/purchases)
+Databases:
+
+MongoDB: Used for persistence and retrieval of core User and Authentication records.
+
+Local/Mock Data: Used for static book list display and purchase simulation on the frontend.
