@@ -22,13 +22,7 @@ const Home = () => {
             EduBooks offers a vast, curated library of educational resources, from academic texts to professional guides, ready when you are.
           </p>
 
-          {/* Call-to-action button */}
-          <Link 
-            to="/register" 
-            className="mt-8 inline-block px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg rounded-xl shadow-lg shadow-purple-500/50 transition-all duration-300 transform hover:scale-[1.02]"
-          >
-            Start Your Free Account Today
-          </Link>
+          
         </div>
 
         {/* 2. Features Section */}
@@ -74,7 +68,7 @@ const Home = () => {
             
             {/* Logo/Branding Column */}
             <div className="col-span-2 md:col-span-1">
-              <Link to="/" className="flex items-center text-2xl font-extrabold text-purple-400 hover:text-purple-300 transition duration-200">
+              <Link to="/register" className="flex items-center text-2xl font-extrabold text-purple-400 hover:text-purple-300 transition duration-200">
                 <BookOpen className="mr-2" size={24} />
                 EduBooks
               </Link>

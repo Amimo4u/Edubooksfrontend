@@ -26,7 +26,8 @@ const Navbar = () => {
   // Dynamic links based on authentication status
   const authItems = isLoggedIn ? (
     <>
-      <Link to="/dashboard" className="nav-link">Dashboard</Link>
+      
+      <Link to="/books" className="nav-link">Browse Books</Link>
       <button 
         onClick={handleLogout}
         className="nav-link flex items-center gap-1 text-red-100 hover:text-white"
